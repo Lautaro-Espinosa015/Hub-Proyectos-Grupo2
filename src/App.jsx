@@ -8,6 +8,7 @@ import Home from './assets/Components/Home.jsx'
 import Games from './assets/Components/Games.jsx'
 import AboutUs from './assets/Components/AboutUs.jsx'
 import Error from './assets/Components/Error.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
  
 
