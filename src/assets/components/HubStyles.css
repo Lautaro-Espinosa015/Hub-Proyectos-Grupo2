@@ -1,0 +1,90 @@
+/* === Layout === */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden; /* Evita que el contenedor principal tenga scroll */
+}
+
+.page-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto; /* Única área con scroll vertical */
+}
+
+
+/* === MainHeader === */
+.main-header {
+  background-color: var(--steam-header);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.main-header-brand {
+  color: var(--steam-text);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.group-icon {
+  font-size: 1.8rem;
+  margin-right: 0.75rem;
+  color: var(--steam-link);
+}
+
+.main-header-link {
+  color: var(--steam-text);
+  margin: 0 1rem;
+  transition: color 0.2s;
+}
+
+.main-header-link:hover {
+  color: var(--steam-link); /* Azul brillante de Steam */
+}
+
+
+/* === SidebarNav === */
+.sidebar-container {
+  width: 250px;
+  flex-shrink: 0; /* Evita que la sidebar se encoja */
+  background-color: var(--steam-sidebar);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  padding-top: 1rem;
+}
+
+.sidebar-link {
+  color: var(--steam-text);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background-color: rgba(102, 192, 244, 0.1); /* Fondo semitransparente */
+  color: var(--steam-link); /* Azul brillante de Steam */
+  text-decoration: none;
+}
+
+/*
+  DEPRECATED STYLES - Estos estilos ya no son necesarios con el nuevo layout.
+  Puedes eliminarlos si lo deseas.
+*/
+.steam-layout, .steam-main-content, .steam-sidebar-col, .steam-sidebar, .steam-header {
+  /* Estos selectores se mantienen por si hay referencias en otros lugares,
+     pero su funcionalidad ha sido reemplazada por las nuevas clases. */
+}
+
+/*
+  Reseteo para Nav.Link de react-bootstrap cuando se usa con `as={NavLink}`
+  Esto ya no es necesario con la nueva implementación de SidebarNav.jsx
+  .steam-sidebar .nav-link {
+    padding: 0;
+  }
+*/

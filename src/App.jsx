@@ -10,7 +10,6 @@ import Error from './assets/components/pages/Error'
 function App() {
   return (
     <Container>
-      <h1>Hola Za Warudo!</h1>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
