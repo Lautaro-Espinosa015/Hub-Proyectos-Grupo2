@@ -1,17 +1,20 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
+import MainHeader from '../MainHeader';
+import SidebarNav from '../SidebarNav';
+import '../HubStyles.css';
 
 function Layout() {
   return (
-    <>
-      <header>
-        <h1>Layout</h1>
-      </header>
-      <main>
-        <h2>Cuerpo de la página</h2>
-        <Outlet /> {/* <- IMPORTANTE: aquí se renderizan las rutas hijas */}
+    <div className="app-container">
+      <MainHeader />
+      <main className="main-content">
+        <SidebarNav />
+        <div className="page-content">
+          <Outlet />
+        </div>
       </main>
-    </>
-  )
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;
