@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #00fff2;
+  color: #4600ae;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.resultado {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #9b70f0;
+  border: 1px solid #175303;
+  border-radius: 4px;
+  max-width: 300px;
+}
