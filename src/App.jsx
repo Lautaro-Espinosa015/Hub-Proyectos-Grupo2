@@ -1,23 +1,25 @@
-import './App.css'
 import { Container } from 'react-bootstrap'
 import { Routes, Route } from 'react-router-dom'
-import Layout from './assets/components/pages/Layout'
-import Home from './assets/components/pages/Home'
-import Games from './assets/components/pages/Games'
-import AboutUs from './assets/components/pages/AboutUs'
-import Error from './assets/components/pages/Error'
+import Layout from './assets/Pages/Layout'
+import Home from './assets/Pages/Home'
+import Games from './assets/Pages/Games'
+import AboutUs from './assets/Pages/AboutUs'
+import Error from './assets/Pages/Error'
+import Proyecto4 from './assets/Pages/Proyecto4'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Container>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path='games' element={<Games />} />
-          <Route path='aboutus' element={<AboutUs />} />
-          <Route path='*' element={<Error />} />
-        </Route>
-      </Routes>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='games' element={<Games />} />
+        <Route path='aboutus' element={<AboutUs />} />
+        <Route path='proyecto4' element={<Proyecto4 />} />
+        <Route path='*' element={<Error />} />
+      </Route>
+    </Routes>
     </Container>
   )
 }
