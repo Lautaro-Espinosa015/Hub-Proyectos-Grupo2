@@ -13,7 +13,7 @@ function SidebarNav() {
           <i className="bi bi-house-door me-2"></i>Inicio
         </NavLink>
         <NavLink to="/games" className={navLinkClassName}>
-          <i className="bi bi-collection me-2"></i>Proyectos
+          <i className="bi bi-collection me-2"></i>Juegos
         </NavLink>
         <NavLink to="/view/html-project" className={navLinkClassName}>
           <i className="bi bi-code-square me-2"></i>Proyecto HTML
