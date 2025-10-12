@@ -1,0 +1,44 @@
+/* Fondo blanco + texto oscuro para que se vea */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #abdf88;
+  font-family: 'sans-serif';
+  color: #222;
+}
+
+h1 {
+  color: #176041;
+  text-align: center;
+  margin-top: 0;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 420px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+  background: #fff;
+}
+
+input, button {
+  width: 100%;
+  padding: 11px 03px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: #176041;
+  color: #fff;
+  font-weight: 500;
+}
+button:hover { opacity: 0.92; }

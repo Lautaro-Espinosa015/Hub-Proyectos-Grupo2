@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    ;
+    color: white;
+}
+
+.section-formulario{
+    background-color: grey;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+
+
+
+
