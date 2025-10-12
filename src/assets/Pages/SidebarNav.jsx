@@ -21,6 +21,13 @@ function SidebarNav() {
         <NavLink to="/view/react-project" className={navLinkClassName}>
           <i className="bi bi-code-slash me-2"></i>Proyecto React
         </NavLink>
+        <NavLink to="/pet-registry" className={navLinkClassName}>
+          <i className="bi bi-paw me-2"></i>Registro de Mascotas
+        </NavLink>
+        <NavLink to="/aboutus" className={navLinkClassName}>
+          <i className="bi bi-people me-2"></i>Sobre Nosotros
+        </NavLink>
+
         <NavLink to="/proyecto4" className={navLinkClassName}>
           <i className="bi bi-joystick me-2"></i>Proyecto 4
         </NavLink>

@@ -6,7 +6,9 @@ import Games from './assets/Pages/Games'
 import AboutUs from './assets/Pages/AboutUs'
 import Error from './assets/Pages/Error'
 import Proyecto4 from './assets/Pages/Proyecto4'
+import PetRegistry from './assets/RegistroMascotas/PetRegistry'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='games' element={<Games />} />
         <Route path='aboutus' element={<AboutUs />} />
+        <Route path='pet-registry' element={<PetRegistry />} />
         <Route path='proyecto4' element={<Proyecto4 />} />
         <Route path='*' element={<Error />} />
       </Route>

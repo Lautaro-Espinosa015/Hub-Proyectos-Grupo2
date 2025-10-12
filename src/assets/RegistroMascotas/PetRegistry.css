@@ -1,0 +1,109 @@
+/* Estilos específicos para el componente PetRegistry */
+.pet-registry-container {
+  /* --- Variables de Color para Personalización --- */
+  /* Cambia estos valores para ajustar el tema del componente. */
+
+  /* Colores de Fondo */
+  --pet-bg-main: #550091;               /* Fondo de los contenedores (formulario, tabla, etc.) */
+
+  /* Colores de Texto */
+  --pet-text-color: #fff4f4;            /* Color del texto principal */
+  --pet-button-primary-text: #ffffff;   /* Color del texto en botones primarios */
+  --pet-button-danger-text: white;      /* Color del texto en botones de peligro */
+  --pet-radio-text-checked: rgb(255, 255, 255); /* Color del texto en radio-button seleccionado */
+
+  /* Colores de Botones */
+  --pet-button-primary-bg: #02af02;     /* Fondo del botón principal (Registrar) */
+  --pet-button-danger-bg: #dc3545;      /* Fondo del botón de peligro (Eliminar) */
+  --pet-radio-bg: #ff0000;              /* Fondo de los radio-button no seleccionados */
+  --pet-radio-bg-checked: #176041;      /* Fondo del radio-button seleccionado */
+
+  /* Colores de Bordes */
+  --pet-input-border: #001877;          /* Borde de los campos de texto y selectores */
+  --pet-radio-border: #87e368;          /* Borde de los radio-button no seleccionados */
+  --pet-radio-border-checked: #176041;  /* Borde del radio-button seleccionado */
+
+  width: 100%;
+  max-width: 650px; /* Un poco más de ancho para que no se vea apretado */
+  margin: 0 auto; /* Centra el contenedor en el espacio disponible */
+  padding: 1rem;
+  font-family: sans-serif;
+  color: var(--pet-text-color);
+}
+
+.pet-registry-container h1,
+.pet-registry-container h4,
+.pet-registry-container form,
+.pet-registry-container table {
+  background: var(--pet-bg-main);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.pet-registry-container input, 
+.pet-registry-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 7px;
+  border: 1px solid var(--pet-input-border);
+  font-size: 16px;
+}
+
+.pet-registry-container label[for="vacunadaSi"],
+.pet-registry-container label[for="vacunadaNo"] {
+  display: inline-block;
+  background-color: var(--pet-radio-bg);
+  padding: 10px 15px;
+  border-radius: 7px;
+  border: 1px solid var(--pet-radio-border);
+  cursor: pointer;
+  transition: 0.3s;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.pet-registry-container input[type="radio"] {
+  display: none; /* Ocultamos el radio button por defecto */
+}
+
+/* Estilo para cuando el radio button está seleccionado */
+.pet-registry-container input[type="radio"]:checked + label {
+  background-color: var(--pet-radio-bg-checked);
+  color: var(--pet-radio-text-checked);
+  border-color: var(--pet-radio-border-checked);
+}
+
+.pet-registry-container .radio-container {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones Sí y No */
+  margin: 8px 0 15px 0;
+}
+
+.pet-registry-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 7px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: var(--pet-button-primary-bg);
+  color: var(--pet-button-primary-text);
+  font-weight: 500;
+}
+
+/* Estilo para el botón de eliminar */
+.pet-registry-container .btn-eliminar {
+  background-color: var(--pet-button-danger-bg);
+  color: var(--pet-button-danger-text);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto; /* Hacemos que el botón no ocupe el 100% */
+  margin-top: 0;
+}
