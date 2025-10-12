@@ -72,19 +72,3 @@
   text-decoration: none;
 }
 
-/*
-  DEPRECATED STYLES - Estos estilos ya no son necesarios con el nuevo layout.
-  Puedes eliminarlos si lo deseas.
-*/
-.steam-layout, .steam-main-content, .steam-sidebar-col, .steam-sidebar, .steam-header {
-  /* Estos selectores se mantienen por si hay referencias en otros lugares,
-     pero su funcionalidad ha sido reemplazada por las nuevas clases. */
-}
-
-/*
-  Reseteo para Nav.Link de react-bootstrap cuando se usa con `as={NavLink}`
-  Esto ya no es necesario con la nueva implementación de SidebarNav.jsx
-  .steam-sidebar .nav-link {
-    padding: 0;
-  }
-*/

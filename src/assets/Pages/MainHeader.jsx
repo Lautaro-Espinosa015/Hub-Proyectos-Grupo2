@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { PeopleFill } from 'react-bootstrap-icons';
-import './HubStyles.css';
+import '../Css/HubStyles.css';
 
 function MainHeader() {
   return (
@@ -15,8 +15,9 @@ function MainHeader() {
         <Navbar.Collapse id="main-navbar-nav">
           <Nav className="w-100">
             <Nav.Link as={Link} to="/" className="main-header-link">Inicio</Nav.Link>
-            <Nav.Link as={Link} to="/projects" className="main-header-link">Proyectos</Nav.Link>
-            <Nav.Link as={Link} to="/about" className="main-header-link">Sobre Nosotros</Nav.Link>
+            <Nav.Link as={Link} to="/games" className="main-header-link">Proyectos</Nav.Link>
+            <Nav.Link as={Link} to="/aboutus" className="main-header-link">Sobre Nosotros</Nav.Link>
+           <Nav.Link as={Link} to="/proyecto4" className="main-header-link">Proyecto4</Nav.Link>
             <Nav.Link href="#profile" className="main-header-link ms-auto">
               <i className="bi bi-person-circle"></i> Perfil
             </Nav.Link>

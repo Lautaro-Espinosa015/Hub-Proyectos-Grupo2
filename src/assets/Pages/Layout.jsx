@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import MainHeader from '../MainHeader';
-import SidebarNav from '../SidebarNav';
-import '../HubStyles.css';
+import MainHeader from './MainHeader';
+import SidebarNav from './SidebarNav';
+import '../Css/HubStyles.css';
 
 function Layout() {
   return (

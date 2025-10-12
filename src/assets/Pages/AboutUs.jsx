@@ -1,9 +1,9 @@
 function AboutUs() {
   return (
     <div>
-      <h1>Sobre Vosotros</h1>
+      <h1>Sobre Nosotros</h1>
     </div>
   )
-}
+};
 
 export default AboutUs
