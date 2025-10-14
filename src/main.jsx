@@ -11,3 +11,4 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
+//colocar dentro de "BrowserRouter" a "HomeProvider" conteniendo a "App"
