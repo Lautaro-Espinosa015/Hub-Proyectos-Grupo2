@@ -1,43 +1,59 @@
-import { Nav } from 'react-bootstrap';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Css/HubStyles.css';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { Home, Folder, Code, CodeSharp, Pets, People, SportsEsports } from '@mui/icons-material'; // Iconos de MUI
+
+// Array para definir los enlaces de navegación, hace el código más limpio
+const navItems = [
+  { text: 'Inicio', icon: <Home />, to: '/' },
+  { text: 'Sobre Nosotros', icon: <People />, to: '/aboutus' },
+  { text: 'Proyecto 1: HTML', icon: <Code />, to: '/view/html-project' },
+  { text: 'Proyecto 2', icon: <CodeSharp />, to: '/proyecto2' },
+  { text: 'Proyecto 3: Registro de Mascotas', icon: <Pets />, to: '/pet-registry' },
+  { text: 'Proyecto 4', icon: <SportsEsports />, to: '/proyecto4' },
+  { text: 'Proyecto 5: Juego Estrella', icon: <Folder />, to: '/games' },
+  { text: 'Proyecto 5: Formulario', icon: <Folder />, to: '/formulario' },
+];
 
 function SidebarNav() {
-  const navLinkClassName = ({ isActive }) => 
-    isActive ? 'sidebar-link active' : 'sidebar-link';
-
   return (
-    <div className="sidebar-container">
-      <Nav className="flex-column">
-        <NavLink to="/" end className={navLinkClassName}>
-          <i className="bi bi-house-door me-2"></i>Inicio
-        </NavLink>
-        <NavLink to="/games" className={navLinkClassName}>
-          <i className="bi bi-collection me-2"></i>Juegos
-        </NavLink>
-        <NavLink to="/view/html-project" className={navLinkClassName}>
-          <i className="bi bi-code-square me-2"></i>Proyecto HTML
-        </NavLink>
-        <NavLink to="/view/react-project" className={navLinkClassName}>
-          <i className="bi bi-code-slash me-2"></i>Proyecto React
-        </NavLink>
-         <NavLink to="/proyecto2" className={navLinkClassName}>
-          <i className="bi bi-paw me-2"></i>Proyecto 2
-        </NavLink>
-        <NavLink to="/pet-registry" className={navLinkClassName}>
-          <i className="bi bi-paw me-2"></i>Registro de Mascotas
-        </NavLink>
-        <NavLink to="/aboutus" className={navLinkClassName}>
-          <i className="bi bi-people me-2"></i>Sobre Nosotros
-        </NavLink>
-
-        <NavLink to="/proyecto4" className={navLinkClassName}>
-          <i className="bi bi-joystick me-2"></i>Proyecto 4
-        </NavLink>
-       
-        
-      </Nav>
-    </div>
+    <Box
+      sx={{
+        width: 350,
+        flexShrink: 0,
+        bgcolor: 'background.paper', // Usa el color de fondo del tema
+        borderRight: '1px solid',
+        borderColor: 'divider', // Usa el color de borde del tema
+      }}
+    >
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item.text} disablePadding>
+            <ListItemButton
+              component={NavLink}
+              to={item.to}
+              // El NavLink necesita 'end' para la ruta raíz
+              end={item.to === '/'}
+              sx={{
+                // Estilos para el enlace activo
+                '&.active': {
+                  bgcolor: 'action.selected', // Color del tema para elementos seleccionados
+                  color: 'primary.main',
+                  '& .MuiListItemIcon-root': {
+                    color: 'primary.main', // Cambia también el color del icono
+                  },
+                },
+              }}
+            >
+              <ListItemIcon>
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
   );
 }
 

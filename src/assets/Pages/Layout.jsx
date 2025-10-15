@@ -1,19 +1,29 @@
 import { Outlet } from 'react-router-dom';
-import MainHeader from './MainHeader';
 import SidebarNav from './SidebarNav';
-import '../Css/HubStyles.css';
+import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+
+// Creamos un tema oscuro para Material-UI que coincida con nuestros estilos CSS
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#66c0f4', // --link-color
+    },
+    background: {
+      paper: '#212832', // --sidebar-bg
+    },
+  },  
+});
 
 function Layout() {
   return (
-    <div className="app-container">
-      <MainHeader />
-      <main className="main-content">
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline /> {/* Normaliza estilos y aplica fondo oscuro al body */}
+      <div className="main-content">
         <SidebarNav />
-        <div className="page-content">
-          <Outlet />
-        </div>
-      </main>
-    </div>
+        <main className="page-content"><Outlet /></main>
+      </div>
+    </ThemeProvider>
   );
 }
 
