@@ -1,17 +1,12 @@
 import { Outlet } from 'react-router-dom';
-import MainHeader from './MainHeader';
 import SidebarNav from './SidebarNav';
-import '../Css/HubStyles.css';
 
 function Layout() {
   return (
-    <div className="app-container">
-      <MainHeader />
-      <main className="main-content">
-        <SidebarNav />
-        <div className="page-content">
-          <Outlet />
-        </div>
+    <div style={{ display: 'flex' }}>
+      <SidebarNav />
+      <main style={{ flexGrow: 1 }}>
+        <Outlet />
       </main>
     </div>
   );
