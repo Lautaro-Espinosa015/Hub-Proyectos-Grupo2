@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../Css/Proyecto2.css'; // Importamos los nuevos estilos
 
 const ejercicios = [
   { nombre: 'Ejercicio 1', ruta: '/Proyecto02/Ejercicio1/ejercicio1.html' },
@@ -12,32 +13,22 @@ export default function Proyecto2() {
   const [activo, setActivo] = useState(ejercicios[0].ruta);
 
   return (
-    <div>
+    <div className="proyecto2-container">
       <h2>Proyecto02 - Ejercicios</h2>
-      <div style={{ display: 'flex', borderBottom: '2px solid #ccc' }}>
+      <div className="ejercicios-nav">
         {ejercicios.map((ej, idx) => (
           <button
             key={idx}
             onClick={() => setActivo(ej.ruta)}
-            style={{
-              flex: 1,
-              padding: '10px',
-              background: activo === ej.ruta ? '#ddd' : '#f0f0f0',
-              border: 'none',
-              borderRight: '1px solid #ccc',
-              fontWeight: activo === ej.ruta ? 'bold' : 'normal',
-              cursor: 'pointer',
-            }}
+            className={`ejercicio-tab ${activo === ej.ruta ? 'active' : ''}`}
           >
             {ej.nombre}
           </button>
         ))}
       </div>
-      <iframe
-        src={activo}
-        style={{ width: '100%', height: '500px', border: 'none', marginTop: '10px' }}
-        title="Ejercicio Viewer"
-      />
+      <div className="iframe-container">
+        <iframe src={activo} title="Ejercicio Viewer" />
+      </div>
     </div>
   );
 }

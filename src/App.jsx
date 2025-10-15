@@ -1,5 +1,4 @@
-import { Box } from '@mui/material';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import Layout from './assets/Pages/Layout'
 import Home from './assets/Pages/Home'
 import Games from './assets/Pages/Games'
@@ -12,20 +11,17 @@ import Proyecto4 from './assets/Pages/Proyecto4'
 
 function App() {
   return (
-    // Usamos Box en lugar de Container para evitar conflictos de estilo.
-    <Box> 
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path='games' element={<Games />} />
-          <Route path='aboutus' element={<AboutUs />} />
-          <Route path='proyecto2' element={<Proyecto2 />} />
-          <Route path='pet-registry' element={<PetRegistry />} />
-          <Route path='proyecto4' element={<Proyecto4 />} />
-          <Route path='*' element={<Error />} />
-        </Route>
-      </Routes>
-    </Box>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='games' element={<Games />} />
+        <Route path='aboutus' element={<AboutUs />} />
+        <Route path='proyecto2' element={<Proyecto2 />} />
+        <Route path='pet-registry' element={<PetRegistry />} />
+        <Route path='proyecto4' element={<Proyecto4 />} />
+        <Route path='*' element={<Error />} />
+      </Route>
+    </Routes>
   )
 }
 

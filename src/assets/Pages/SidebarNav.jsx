@@ -11,7 +11,8 @@ const navItems = [
   { text: 'Proyecto 2', icon: <CodeSharp />, to: '/proyecto2' },
   { text: 'Proyecto 3: Registro de Mascotas', icon: <Pets />, to: '/pet-registry' },
   { text: 'Proyecto 4', icon: <SportsEsports />, to: '/proyecto4' },
-  { text: 'Proyecto 5', icon: <Folder />, to: '/games' },
+  { text: 'Proyecto 5: Juego Estrella', icon: <Folder />, to: '/games' },
+  { text: 'Proyecto 5: Formulario', icon: <Folder />, to: '/formulario' },
 ];
 
 function SidebarNav() {

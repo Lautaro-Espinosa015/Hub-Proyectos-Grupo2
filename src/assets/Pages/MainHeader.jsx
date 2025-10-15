@@ -21,6 +21,7 @@ function MainHeader() {
             <Nav.Link as={Link} to="/pet-registry" className="main-header-link">Registro de Mascotas</Nav.Link>
             <Nav.Link as={Link} to="/proyecto4" className="main-header-link">Proyecto4</Nav.Link>
             <Nav.Link href="#profile" className="main-header-link ms-auto">
+            <Nav.Link as={Link} to="/formulario" className="main-header-link">Formulario</Nav.Link> 
               <i className="bi bi-person-circle"></i> Perfil
             </Nav.Link>
           </Nav>

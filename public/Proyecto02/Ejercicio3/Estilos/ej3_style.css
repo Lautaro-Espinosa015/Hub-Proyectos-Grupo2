@@ -1,47 +1,74 @@
- body {
-      font-family: Arial, sans-serif;
-      background: #e9f0af;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .contenedor {
-      background: rgb(154, 241, 212);
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-      text-align: center;
-      width: 350px;
-    }
-    h2 {
-      margin-bottom: 10px;
-      color: #333;
-    }
-    #cadena {
-      padding: 8px;
-      width: 90%;
-      margin-bottom: 10px;
-      border: 5px solid #96f55e;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    button {
-      background: #0077cc;
-      color: rgb(171, 182, 231);
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 16px;
-    }
-    button:hover {
-      background: #005fa3;
-    }
-    #resultado {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #444;
-    }
+/* Estilo oscuro para los ejercicios del Proyecto 2 */
+
+:root {
+  --bg-color: #171d25;
+  --container-bg: #212832;
+  --text-color: #dcdedf;
+  --primary-color: #66c0f4;
+  --border-color: #3a3f4b;
+}
+
+body {
+  font-family: 'sans-serif';
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  background: var(--container-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border-color);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+#cadena {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+button {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#resultado {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  min-height: 24px; /* Evita saltos de layout */
+}
