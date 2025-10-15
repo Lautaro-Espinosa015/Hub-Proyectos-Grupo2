@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import "./Formulario.css";
+import "../Css/formulario.css";
 
 function Formulario() {
-  // Estado que guarda la lista de personas
   const [personas, setPersonas] = useState([]);
 
-  // Agregar una nueva persona
   const agregarPersona = (nuevaPersona) => {
     setPersonas((personasActuales) => [...personasActuales, nuevaPersona]);
   };
 
+  const eliminarPersona = (indexAEliminar) => {
+    setPersonas((personasActuales) =>
+      personasActuales.filter((_, i) => i !== indexAEliminar)
+    );
+  };
 
-  // Manejar el envío del formulario
   const manejarSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -28,7 +30,6 @@ function Formulario() {
     form.reset();
   };
 
-
   return (
     <div className="formulario-container">
       <h1>Formulario</h1>
@@ -40,6 +41,8 @@ function Formulario() {
         <label htmlFor="edad">Edad:</label>
         <input type="number" id="edad" name="edad" min="0" required />
 
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
         <label htmlFor="genero">Género:</label>
         <select id="genero" name="genero" required defaultValue="">
@@ -48,6 +51,9 @@ function Formulario() {
           <option value="Masculino">Masculino</option>
           <option value="Otro">Otro</option>
         </select>
+
+        <label htmlFor="pais">País:</label>
+        <input type="text" id="pais" name="pais" required />
 
         <button type="submit">Agregar</button>
       </form>

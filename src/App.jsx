@@ -7,7 +7,7 @@ import Error from './assets/Pages/Error'
 import Proyecto2 from './assets/Pages/Proyecto2'
 import PetRegistry from './assets/RegistroMascotas/PetRegistry'
 import Proyecto4 from './assets/Pages/Proyecto4'
-
+import Formulario from './assets/components/formulario.jsx';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path='pet-registry' element={<PetRegistry />} />
         <Route path='proyecto4' element={<Proyecto4 />} />
         <Route path='*' element={<Error />} />
+        <Route path= 'formulario' element={<Formulario />}/>
       </Route>
     </Routes>
   )
