@@ -1,7 +1,20 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Css/style-cussitech.css'; // crea este archivo para los estilos personalizados (mapear clases originales)
-import '../Css/style-cussitech.css'
+ 
+
+
+import ImageMonitor from "../Ing/monitor.png";
+import ImageWebCam from "../Ing/webcam.png";
+import ImageMouse from "../Ing/mouse.png";
+import ImageTeclado from "../Ing/teclado.png";
+import ImageRTX from "../Ing/rtx.png";
+import ImageRyzen from "../Ing/ryzen.png";
+import ImageSSD from "../Ing/SSD.png";
+import ImagePC from "../Ing/pc.png";
+import ImageLogo from "../Ing/logo_EnzerJack.png";
+
+
 
 
 
@@ -25,14 +38,15 @@ return (
 
 export default function CussiTech() {
 const products = [
-{ id: 1, img: '../Ing/monitor.png', title: 'Monitor 8k', price: '400.000' },
-{ id: 2, img: '../Ing/pc.png', title: 'PC Prearmada RTX5070', price: '800.000' },
-{ id: 3, img: '../Ing/webcam.png', title: 'Webcam 4k', price: '50.000' },
-{ id: 4, img: '../Ing/mouse.png', title: 'Mouse Gaimer', price: '60.000' },
-{ id: 5, img: '../Ing/teclado.png', title: 'Teclado magnetico inalambrico 25%', price: '100.000' },
-{ id: 6, img: '../Ing/rtx.png', title: 'Placa de video RTX5080', price: '1.500.000' },
-{ id: 7, img: '../Ing/ryzen.png', title: 'Procesador Ryzen 9990X3D', price: '900.000' },
-{ id: 8, img: '../Ing/ssd.png', title: 'Memoria SSD NVMe 4TB', price: '450.000' },
+{ id: 1, img: ImageMonitor, title: 'Monitor 8k', price: '400.000' },
+{ id: 2, img: ImagePC, title: 'PC Prearmada RTX5070', price: '800.000' },
+{ id: 3, img: ImageWebCam, title: 'Webcam 4k', price: '50.000' }, 
+{ id: 4, img: ImageMouse, title: 'Mouse Gamer', price: '60.000' },
+{ id: 5, img: ImageTeclado, title: 'Teclado magnetico inalambrico 25%', price: '100.000' },
+{ id: 6, img: ImageRTX, title: 'Placa de video RTX5080', price: '1.500.000' },
+{ id: 7, img: ImageRyzen, title: 'Procesador Ryzen 9990X3D', price: '900.000' },
+{ id: 8, img: ImageSSD, title: 'Memoria SSD NVMe 4TB', price: '450.000' },
+
 ];
 
 
@@ -41,7 +55,7 @@ return (
 {/* Header */}
 <header className="bg-light border-bottom py-2">
 <div className="container d-flex align-items-center gap-3">
-<img src="../Ing/logo.png" alt="CussiTech" className="logo img-fluid" style={{width:64, height:64, objectFit:'contain'}} />
+<img src={ImageLogo} alt="CussiTech" className="logo img-fluid" style={{width:64, height:64, objectFit:'contain'}} />
 <h1 className="h4 m-0">CussiTech</h1>
 </div>
 </header>
