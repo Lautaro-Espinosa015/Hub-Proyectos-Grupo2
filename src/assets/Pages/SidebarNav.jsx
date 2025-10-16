@@ -7,7 +7,7 @@ import { Home, Folder, Code, CodeSharp, Pets, People, SportsEsports } from '@mui
 const navItems = [
   { text: 'Inicio', icon: <Home />, to: '/' },
   { text: 'Sobre Nosotros', icon: <People />, to: '/aboutus' },
-  { text: 'Proyecto 1: HTML', icon: <Code />, to: '/view/html-project' },
+  { text: 'Proyecto 1: HTML', icon: <Code />, to: '/ProyectoHtml1' },
   { text: 'Proyecto 2', icon: <CodeSharp />, to: '/proyecto2' },
   { text: 'Proyecto 3: Registro de Mascotas', icon: <Pets />, to: '/pet-registry' },
   { text: 'Proyecto 4', icon: <SportsEsports />, to: '/proyecto4' },
