@@ -21,7 +21,7 @@ import imageLautaro from '../Ing/Logo_Lautaro.jpg';
 const teamMembers = [
   {
     id: 1,
-    nameTag: 'Lautaro Lautaroso',
+    nameTag: 'Lautii',
     name: 'Espinosa Lautaro Eduardo',
     image: imageLautaro
   },

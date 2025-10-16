@@ -11,12 +11,5 @@ export default function Controls({ onReiniciar, juegoActivo }) {
     cursor: 'pointer',
   };
 
-  return (
-    <div style={style}>
-      <button style={btnStyle} onClick={onReiniciar}>
-        Reiniciar
-      </button>
-      <span style={{ color: '#888' }}>{juegoActivo ? 'En juego' : 'Detenido'}</span>
-    </div>
-  );
+  
 }

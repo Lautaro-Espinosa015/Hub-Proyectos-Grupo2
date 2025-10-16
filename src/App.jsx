@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './assets/Pages/Layout';
 import Home from './assets/Pages/Home';
+import ProyectoHtml1 from './assets/Pages/ProyectoHtml1.jsx';
 import Games from './assets/Pages/Games';
 import AboutUs from './assets/Pages/AboutUs';
 import Error from './assets/Pages/Error';
@@ -15,7 +16,8 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='games' element={<Games />} />
-        <Route path='aboutus' element={<AboutUs />} />
+        <Route path='aboutus' element={<AboutUs />} /> 
+        <Route path='proyectohtml1' element={<ProyectoHtml1 />} />
         <Route path='proyecto2' element={<Proyecto2 />} />
         <Route path='pet-registry' element={<PetRegistry />} />
         <Route path='proyecto4' element={<Proyecto4 />} />
