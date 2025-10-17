@@ -16,13 +16,6 @@
   height: 100vh;
 }
 
-.main-content {
-  flex-grow: 1;
-  display: flex;
-  overflow: hidden; /* Evita que el contenedor principal tenga scroll */
-  min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la pantalla */
-}
-
 .page-content {
   flex-grow: 1;
   padding: 2rem;
