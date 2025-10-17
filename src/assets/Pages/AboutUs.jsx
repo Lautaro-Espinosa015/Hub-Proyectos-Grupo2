@@ -59,7 +59,7 @@ function AboutUs() {
           Presentación del Grupo 2
         </Typography>
         <Typography variant="h5" color="text.secondary">
-          Conoce al equipo detrás de los proyectos.
+          Conoce al equipo detrás de los proyectos de FPW.
         </Typography>
       </Box>
 
