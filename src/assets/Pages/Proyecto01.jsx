@@ -3,6 +3,8 @@ import '../Css/P1_style-Cussi.css'; // Usamos un estilo genérico para el conten
 import rutaProyecto1Cussi from '../components/P1_index-Cussi.html?url'; // Asumiendo que este archivo existe
 import rutaProyecto1Estrada from '../components/P1_index-Estrada.html?url';
 import rutaProyecto1Espinosa from '../components/P1_index-Espinosa.html?url';
+import rutaProyecto1Silva from '../components/P1_index-Silva.html?url';
+import rutaProyecto1Morales from '../components/P1_index-Morales.html?url';
 import "../components/P1_Desafio.html?url"; // Asegura que el archivo HTML se procese
 
 /**
@@ -28,6 +30,14 @@ export default function Proyecto01() {
     '/Proyecto01_Espinosa': {
       src: rutaProyecto1Espinosa,
       title: 'Proyecto 1 - Espinosa',
+    },
+    '/Proyecto01_Silva': {
+      src: rutaProyecto1Silva,
+      title: 'Proyecto 1 - Silva',
+    },
+    '/Proyecto01_Morales': {
+      src: rutaProyecto1Morales,
+      title: 'Proyecto 1 - Morales',
     },
   };
 
